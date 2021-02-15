@@ -5,9 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tetris</title>
     <script src="app.js" charset="utf-8"></script>
+    <script src="transition.js" charset="utf-8"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="transition.css">
 </head>
 <body>
+    <div id="grid-transition">
+
+    </div>
+    
     <audio id="break-line">
         <source src="assets/sound/completetask_0.mp3" type="audio/mpeg">
     </audio>
@@ -17,7 +25,7 @@
     <audio id="game-over">
         <source src="assets/sound/game_over_bad_chest.wav", type="audio/wav">
     </audio>
-    <div class="content">
+    <div class="content" id="game">
         <div class="score-div">
             <h3>Score: <span id="score">0</span></h3>
             <h3> Best Score : <span id="best-score">0</span></h3>
@@ -262,6 +270,133 @@
             </div>
         </div>
     </div>
+    <div class="about" id="about">
+        <h1>A propos</h1>
+        <div class="basics">
+            <div class="grid-title">
+                <div class="mini-grid-about">
+                    <div></div>
+                    <div class="tetromino-about"></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div class="tetromino-about"></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div class="tetromino-about"></div>
+                    <div class="tetromino-about"></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <h3>  Les Bases </h3>
+            </div>          
+           <p>Ce projet est née a partir d'un tutoriel de Ania kubow <a href="https://www.youtube.com/watch?v=rAUn1Lom6dw">(lien du tutoriel)</a> qui réalise un jeu Tetris en html css et javascript sans utilisé de canvas. La grille du jeu et les tetrominos sont simplement des div html colorées ou non. Après avoir suivi ce tutoriel j'ai décidé d'y ajouté quelques améliorations.</p> 
+        </div>
+        <div class="update">
+            <div class="grid-title">
+                <div class="mini-grid-about">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div class="tetromino-about"></div>
+                    <div class="tetromino-about"></div>
+                    <div></div>
+                    <div></div>
+                    <div class="tetromino-about"></div>
+                    <div class="tetromino-about"></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <h3> Mes Améliorations</h3>
+            </div>
+            <div>
+                Mes améliorations suite au tutoriel : 
+                <ul>
+                    <li>Style css sur la page</li>
+                    <li>Bouton restart </li>
+                    <li>Système de niveaux et nouveaux tetrominos</li>
+                    <li>Effet sonore lors du passage au niveau supérieur, de gain de point et à la fin de la partie</li>
+                </ul>
+            </div>
+        </div>
+        <div class="game">
+            <div class="grid-title">
+                <div class="mini-grid-about">
+                    <div></div>
+                    <div class="tetromino-about"></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div class="tetromino-about"></div>
+                    <div class="tetromino-about"></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div class="tetromino-about"></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <h3> Le Jeu</h3>
+            </div>
+            <div>
+                Le jeu est composé de 5 niveaux différents : 
+                <ul>
+                    <li>Niveau 1 : 5 tetrominos différents, vitesse de base</li>
+                    <li>Niveau 2 : Accélération de la vitesse de descente des Tetrominos</li>
+                    <li>Niveau 3 : Ajout de 2 Tetrominos </li>
+                    <li>Niveau 4 : Accélération de la vitesse de descente des Tetrominos</li>
+                    <li>Niveau 5 : Ajout de 3 Tetrominos</li>
+                </ul>
+            </div>
+            
+        </div>
+        <div class="link">
+            <div class="grid-title">
+                <div class="mini-grid-about">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div class="tetromino-about"></div>
+                    <div></div>
+                    <div></div>
+                    <div class="tetromino-about"></div>
+                    <div class="tetromino-about"></div>
+                    <div class="tetromino-about"></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <h3> Liens </h3>
+            </div>
+            <div>
+                Différents liens : 
+                <ul>
+                    <li><a href="https://www.youtube.com/watch?v=rAUn1Lom6dw">Liens du Tutoriel de base</a></li>
+                    <li><a href="https://github.com/LeYaz/tetris">Repository gitHub du projet</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="div-btn-transition">
+        <button id="transition"> A propos</button>
+    </div>
+    
 
 </body>
 </html>
