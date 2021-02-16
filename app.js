@@ -117,8 +117,8 @@ document.addEventListener('DOMContentLoaded', ()=>{
       ]
 
 
-        let theTetrominoes = [lTetromino, zTetromino, tTetromino, oTetromino, iTetromino];
-     //const theTetrominoes = [oneTetromino, dobleTetromino];
+        //let theTetrominoes = [lTetromino, zTetromino, tTetromino, oTetromino, iTetromino];
+        let theTetrominoes = [tTetromino];
 
       let currentPosition = 4;
       let currentRotation =0;
@@ -219,12 +219,21 @@ document.addEventListener('DOMContentLoaded', ()=>{
       //rotate the tetromino
       function rotate(){
           undraw();
+          const isAtRightEdge = current.some(index => (currentPosition+index)%width === width-1);
+          const isAtLeftEdge = current.some(index => (currentPosition + index) % width ===0);
           currentRotation++;
           if(currentRotation === current.length){
               currentRotation=0;
           }
 
           current = theTetrominoes[random][currentRotation];
+          if(isAtLeftEdge && current.some(index => (currentPosition+index)%width === width-1)){
+            currentPosition+=1
+          }
+
+          if(isAtRightEdge && current.some(index => (currentPosition + index) % width ===0)){
+              currentPosition-=1;
+          }
           draw();
       }
 
