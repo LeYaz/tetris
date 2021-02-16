@@ -117,8 +117,8 @@ document.addEventListener('DOMContentLoaded', ()=>{
       ]
 
 
-        //let theTetrominoes = [lTetromino, zTetromino, tTetromino, oTetromino, iTetromino];
-        let theTetrominoes = [tTetromino];
+        let theTetrominoes = [lTetromino, zTetromino, tTetromino, oTetromino, iTetromino];
+        // let theTetrominoes = [tTetromino];
 
       let currentPosition = 4;
       let currentRotation =0;
